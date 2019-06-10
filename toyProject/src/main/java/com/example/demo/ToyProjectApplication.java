@@ -7,6 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class ToyProjectApplication {
 
 	public static void main(String[] args) {
+		System.out.println("½ÇÇà");
 		SpringApplication.run(ToyProjectApplication.class, args);
 	}
 
