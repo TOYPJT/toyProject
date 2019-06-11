@@ -10,9 +10,8 @@ public class HomeController {
 
 	
 	@RequestMapping(value = "/")
-	@ResponseBody
 	public String home() {
-		System.out.println("컨트롤러");
+		System.out.println("테스트 컨트롤러");
 		return "home";
 	}
 	
