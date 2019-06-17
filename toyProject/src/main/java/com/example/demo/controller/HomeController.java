@@ -20,6 +20,7 @@ public class HomeController {
 	@RequestMapping("/")
 	public String goMain(Model model){
 		List<TmpEntity> list = tmpService.getAllTmpMember();
+		System.out.println(list.get(0).getUser_id());
 	    model.addAttribute("list", list);
 		return "index";
 	}
