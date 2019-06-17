@@ -17,7 +17,7 @@ HelloWorld!!!!
 
 <c:forEach items="${list}" var="user">
 
-${user.user_id }
+${user.userId }
 <br/>
 </c:forEach>
 

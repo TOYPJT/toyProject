@@ -42,10 +42,13 @@ public class HomeController {
 		
 		TmpEntity tmpEntity = new TmpEntity();
 		
-		tmpEntity.setUser_id(user_id);
-		tmpEntity.setUser_password(user_password);
+		tmpEntity.setUserId(user_id);
+		tmpEntity.setUserPassword(user_password);
 		
 		tmpService.saveTmpMember(tmpEntity);
+		
+		List<TmpEntity> list = tmpService.getAllTmpMember();
+		model.addAttribute("list", list);
 		
 	
 		return "index";

@@ -15,10 +15,10 @@ public class TmpEntity {
 	
 	@Id
 	@Column(name="USERID")
-	private String user_id ;
+	private String userId ;
 	
 	@Column(name="PASSWORD")
-	private String user_password;
+	private String userPassword;
 	
 	
 	

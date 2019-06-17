@@ -25,7 +25,8 @@ public class TmpService {
 	 */
 	@Transactional
 	public List<TmpEntity> getAllTmpMember(){
-		return tmpDao.findAll();
+		
+		return tmpDao.findAllByOrderByUserIdDesc();
 	}
 	
 	@Transactional
