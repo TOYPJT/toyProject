@@ -31,16 +31,12 @@ public class HomeController {
 	}
 	
 	@RequestMapping("/save")
-	public String memberSave(Model model){
-		TmpEntity tmpEntity = new TmpEntity();
+	public String memberSave(TmpEntity tmpEntity){
 		
-		tmpEntity.setUser_id("new2");
+		tmpEntity.setUser_id("new3");
 		tmpEntity.setUser_password("pass");
 		
 		tmpService.saveTmpMember(tmpEntity);
-		
-		List<TmpEntity> list = tmpService.getAllTmpMember();
-	    model.addAttribute("list", list);
 		
 		return "index";
 	}

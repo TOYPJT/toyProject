@@ -10,6 +10,7 @@ import javax.persistence.PersistenceContext;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.criterion.Restrictions;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
@@ -19,7 +20,7 @@ import com.jayway.jsonpath.Criteria;
 @Repository
 public interface TmpDao  extends CrudRepository<TmpEntity,String > {
 
-	
+
 	/**
 	 * 회원 전체 return
 	 * @param 
