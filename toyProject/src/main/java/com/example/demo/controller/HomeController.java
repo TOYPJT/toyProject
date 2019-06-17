@@ -3,11 +3,15 @@ package com.example.demo.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpSession;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
+import com.example.demo.DAO.TmpImpl;
 import com.example.demo.service.TmpService;
 import com.example.demo.tmp_entity.TmpEntity;;
 
@@ -16,6 +20,7 @@ public class HomeController {
 	
 	@Autowired
     private TmpService tmpService;
+	private TmpImpl tmpImpl;
 
 	@RequestMapping("/")
 	public String goMain(Model model){
@@ -31,14 +36,21 @@ public class HomeController {
 	}
 	
 	@RequestMapping("/save")
-	public String memberSave(TmpEntity tmpEntity){
+	public String memberSave(@RequestParam(value = "user_id", required = true) String user_id,
+			@RequestParam(value = "user_password", required = true) String user_password,
+            HttpSession session, Model model) {
 		
-		tmpEntity.setUser_id("new3");
-		tmpEntity.setUser_password("pass");
+		TmpEntity tmpEntity = new TmpEntity();
+		
+		tmpEntity.setUser_id(user_id);
+		tmpEntity.setUser_password(user_password);
 		
 		tmpService.saveTmpMember(tmpEntity);
+		
 	
 		return "index";
 	}
+	
+
 	
 }
