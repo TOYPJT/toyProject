@@ -7,6 +7,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-HelloWorld!!!!
+HelloWorld!!!! <br/>
+
+유저 목록 : ${list }
+<br/>
+
+
+${list[0].user_id} <br/>
+${list[1].user_id}
+
+
+
 </body>
 </html>
