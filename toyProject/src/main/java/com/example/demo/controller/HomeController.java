@@ -31,10 +31,10 @@ public class HomeController {
 	}
 	
 	@RequestMapping("/save")
-	public String memSave(Model model){
+	public String memberSave(Model model){
 		TmpEntity tmpEntity = new TmpEntity();
 		
-		tmpEntity.setUser_id("newID¾Æ¾Æµð");
+		tmpEntity.setUser_id("new2");
 		tmpEntity.setUser_password("pass");
 		
 		tmpService.saveTmpMember(tmpEntity);
