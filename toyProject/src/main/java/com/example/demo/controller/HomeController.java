@@ -37,7 +37,7 @@ public class HomeController {
 		tmpEntity.setUser_password("pass");
 		
 		tmpService.saveTmpMember(tmpEntity);
-		
+	
 		return "index";
 	}
 	

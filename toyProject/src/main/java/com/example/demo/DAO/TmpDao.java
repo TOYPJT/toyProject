@@ -22,7 +22,7 @@ public interface TmpDao  extends CrudRepository<TmpEntity,String > {
 
 
 	/**
-	 * È¸¿ø ÀüÃ¼ return
+	 * íšŒì› ëª©ë¡ return
 	 * @param 
 	 * @return
 	 */

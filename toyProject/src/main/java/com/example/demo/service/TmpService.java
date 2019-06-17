@@ -19,7 +19,7 @@ public class TmpService {
 	
 	
 	/**
-	 * È¸¿ø ÀüÃ¼ ¸ñ·Ï return
+	 * íšŒì› ëª©ë¡ return
 	 * @param 
 	 * @return
 	 */
