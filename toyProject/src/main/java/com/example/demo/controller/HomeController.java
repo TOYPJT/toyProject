@@ -21,8 +21,7 @@ public class HomeController {
 	public String goMain(Model model){
 		List<TmpEntity> list = tmpService.getAllTmpMember();
 	    model.addAttribute("list", list);
-		return "main/index";
+		return "index";
 	}
-	
 	
 }
