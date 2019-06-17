@@ -20,8 +20,28 @@ public class HomeController {
 	@RequestMapping("/")
 	public String goMain(Model model){
 		List<TmpEntity> list = tmpService.getAllTmpMember();
-		System.out.println(list.get(0).getUser_id());
 	    model.addAttribute("list", list);
+		return "index";
+	}
+	
+	@RequestMapping("/main")
+	public String goMainIndex(Model model){
+		
+		return "main/index";
+	}
+	
+	@RequestMapping("/save")
+	public String memSave(Model model){
+		TmpEntity tmpEntity = new TmpEntity();
+		
+		tmpEntity.setUser_id("newID¾Æ¾Æµð");
+		tmpEntity.setUser_password("pass");
+		
+		tmpService.saveTmpMember(tmpEntity);
+		
+		List<TmpEntity> list = tmpService.getAllTmpMember();
+	    model.addAttribute("list", list);
+		
 		return "index";
 	}
 	

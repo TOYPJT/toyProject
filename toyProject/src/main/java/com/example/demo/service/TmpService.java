@@ -28,6 +28,11 @@ public class TmpService {
 		return tmpDao.findAll();
 	}
 	
+	@Transactional
+	public void saveTmpMember(TmpEntity tmpEntity){
+		tmpDao.save(tmpEntity);
+	}
+	
 		
 	
 	

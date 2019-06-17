@@ -28,10 +28,6 @@ public interface TmpDao  extends CrudRepository<TmpEntity,String > {
 	List<TmpEntity> findAll();
 	
 	
-	@Override
-	default <S extends TmpEntity> S save(S entity) {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	<S extends TmpEntity> S save(S entity) ;
 	
 }
