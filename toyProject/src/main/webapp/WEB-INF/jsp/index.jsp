@@ -17,7 +17,7 @@ HelloWorld!!!!
 
 <c:forEach items="${list}" var="user">
 
-${user.userId }
+${user.userId } <input type="button" value="삭제" OnClick="window.location='<%=request.getContextPath()%>/delMember?user_id=${user.userId}'" >
 <br/>
 </c:forEach>
 

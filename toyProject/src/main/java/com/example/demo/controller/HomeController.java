@@ -54,6 +54,18 @@ public class HomeController {
 		return "index";
 	}
 	
+	
+	@RequestMapping("/delMember")
+	public String memberSave(@RequestParam(value = "user_id", required = true) String user_id,
+			HttpSession session, Model model) {
+		
+		tmpService.delTmpMember(user_id);
+		
+		List<TmpEntity> list = tmpService.getAllTmpMember();
+		model.addAttribute("list", list);
+		
+		return "index";
+	}
 
 	
 }

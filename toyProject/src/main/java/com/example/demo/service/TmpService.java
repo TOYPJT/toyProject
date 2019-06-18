@@ -34,6 +34,11 @@ public class TmpService {
 		tmpDao.save(tmpEntity);
 	}
 	
+	@Transactional
+	public void delTmpMember(String userId){
+		tmpDao.deleteById(userId);
+	}
+	
 		
 	
 	
