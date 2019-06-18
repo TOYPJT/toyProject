@@ -18,7 +18,7 @@ body{text-align:center;}
 .login-form .login-btn:nth-child(2n-1){background-color:white;color:#008299;border:1px solid #008299}
 .login-form .login-btn:nth-child(2n){background-color:#008299;color:white;}
 .login-form .login-btn:hover{cursor:pointer;}
-.login-form .find-btn{font-size:15px;margin-left:30px;position:relative;top:15px;left:100px;color:#a6a6a6;}
+.login-form .find-btn{font-size:15px;position:relative;top:15px;left:10px;color:#a6a6a6;}
 .login-form .find-btn:hover{color:black;}
 .login-form .easy-login{height:80px;width:100%;border-radius:10px;border:1px solid #a6a6a6;display:flex;justify-content: center;align-items: center;position:relative;margin-top:15px;}
 .login-form .easy-login img{cursor:pointer;}
@@ -31,7 +31,7 @@ body{text-align:center;}
 	<div class="login-wrap">
 		<div class="login-logo"></div>
 		<div class="login-form">
-			<span class="login-desc">아이디</span><br>
+			<span class="login-desc">이메일</span><br>
 			<input type="text" class="login-text"/>
 			<span class="login-desc">비밀번호</span>
 			<input type="password" class="login-text"/>
@@ -43,8 +43,7 @@ body{text-align:center;}
 				<img src="/resources/images/ui/Google_login.png" style="width:60px;margin-left:20px;"/>
 				<img src="/resources/images/ui/Facebook_login.png" style="width:60px;margin-left:20px;"/>
 			</div>
-			<a href="#" class="find-btn">아이디 찾기</a>
-			<a href="#" class="find-btn">비밀번호 찾기</a>
+			<a href="#" class="find-btn">혹시 비밀번호를 잊으셨나요?</a>
 		</div>
 	</div>
 	<div class="footer" style="height:calc(20vh - 75px);">
