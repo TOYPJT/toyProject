@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="/resources/css/ui.css">
 <style>
 body{text-align:center;}
-.login-wrap{width:500px;height:80vh;margin-top:70px;display:inline-block;}
+.login-wrap{width:500px;height:750px;margin-top:70px;display:inline-block;}
 .login-wrap .login-logo{width:100%;height:100px;background-color:#aaa;}
 .login-wrap .login-form{width:calc(100% - 30px);height:calc(100% - 100px);padding:15px;text-align:left;}
 .login-form .login-desc{font-size:15px;}

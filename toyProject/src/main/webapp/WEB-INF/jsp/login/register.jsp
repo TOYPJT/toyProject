@@ -10,9 +10,9 @@
 <link rel="stylesheet" href="/resources/css/ui.css">
 <style>
 body{text-align:center;}
-.login-wrap{width:500px;height:80vh;margin-top:70px;display:inline-block;}
+.login-wrap{width:500px;height:750px;margin-top:70px;display:inline-block;}
 .login-wrap .login-logo{width:100%;height:100px;background-color:#aaa;}
-.login-wrap .login-form{width:calc(100% - 30px);height:calc(100% - 100px);padding:15px;text-align:left;}
+.login-wrap .login-form{width:calc(100% - 30px);height:calc(100% - 80px);padding:15px;text-align:left;}
 .login-form .login-desc{font-size:15px;}
 .login-form .login-text{width:calc(100% - 15px);height:50px;margin-top:15px;margin-bottom:15px;border-radius: 5px;font-size:17px;padding-left:10px;}
 .login-form .login-btn{width:100%;height:50px;margin-top:10px;font-size:17px;border:0;border-radius:5px;font-family:LotteMartDream;background-color:#008299;color:white;}
@@ -30,7 +30,7 @@ body{text-align:center;}
 	<div class="login-wrap">
 		<div class="login-logo"></div>
 		<div class="login-form">
-			<span class="login-desc">아이디</span><br>
+			<span class="login-desc">이메일</span><br>
 			<input type="text" class="login-text" style="width:calc(100% - 135px);"/>
 			<input type="button" class="login-btn" value="중복확인" style="width:100px;margin-top:0;margin-left:5px;" >
 			<span class="login-desc">비밀번호</span>
