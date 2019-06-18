@@ -22,4 +22,9 @@ public class LoginController {
 		return "login/register";
 	}
 	
+	@RequestMapping("/pop/main")
+	public String goPopMain(Model model) {
+		return "pop/main/index";
+	}
+	
 }

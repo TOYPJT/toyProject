@@ -26,6 +26,18 @@ body{text-align:center;}
 .login-wrap{width:100vw;}
 }
 </style>
+<jsp:include page="/WEB-INF/jsp/include/head.jsp"></jsp:include>
+<script>
+function fnLogin(){
+		var url= "/pop/main";    //팝업창에 출력될 페이지 URL
+		var winWidth = 1300;
+	    var winHeight = 700;
+	    var popupX = (window.screen.width / 2) - (winWidth / 2);
+	    var popupY = (window.screen.height / 2) - (winHeight / 2);
+	    var popupOption= "status=no,resizable=no,left="+popupX+",top="+popupY+", width="+winWidth+", height="+winHeight;    //팝업창 옵션(optoin)
+	    window.open(url,"Palendar",popupOption);
+}
+</script>
 </head>
 <body>
 	<div class="login-wrap">
@@ -35,8 +47,8 @@ body{text-align:center;}
 			<input type="text" class="login-text"/>
 			<span class="login-desc">비밀번호</span>
 			<input type="password" class="login-text"/>
-			<input type="submit" class="login-btn" value="로그인"/>
-			<input type="button" class="login-btn" value="회원가입"/>
+			<input type="submit" class="login-btn" onclick="fnLogin()" value="로그인"/>
+			<input type="button" class="login-btn" id="join-btn" value="회원가입"/>
 			<div class="easy-login">
 				<div style="position:absolute;top:-8px;left:20px;background-color:white;font-size:15px;">간편로그인</div>
 				<img src="/resources/images/ui/Naver_login.PNG" style="width:60px;"/>

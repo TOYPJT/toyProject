@@ -22,7 +22,7 @@ body{text-align:center;}
 .login-wrap{width:100vw;}
 }
 </style>
-<script type="text/javascript" src="/resources/js/jquery-1.8.3.min.js"></script>
+<jsp:include page="/WEB-INF/jsp/include/head.jsp"></jsp:include>
 <script>
 </script>
 </head>
