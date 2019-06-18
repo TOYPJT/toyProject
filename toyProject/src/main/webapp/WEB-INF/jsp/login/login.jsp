@@ -4,11 +4,12 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=0.8">
 <title>로그인</title>
 <link rel="stylesheet" href="/resources/css/ui.css">
 <style>
 body{text-align:center;}
-.login-wrap{width:500px;height:80vh;margin-top:70px;border:1px solid #bdbdbd;display:inline-block;}
+.login-wrap{width:500px;height:80vh;margin-top:70px;display:inline-block;}
 .login-wrap .login-logo{width:100%;height:100px;background-color:#aaa;}
 .login-wrap .login-form{width:calc(100% - 30px);height:calc(100% - 100px);padding:15px;text-align:left;}
 .login-form .login-desc{font-size:15px;}
@@ -21,6 +22,9 @@ body{text-align:center;}
 .login-form .find-btn:hover{color:black;}
 .login-form .easy-login{height:80px;width:100%;border-radius:10px;border:1px solid #a6a6a6;display:flex;justify-content: center;align-items: center;position:relative;margin-top:15px;}
 .login-form .easy-login img{cursor:pointer;}
+@media(max-width:500px){
+.login-wrap{width:100vw;}
+}
 </style>
 </head>
 <body>
@@ -43,5 +47,8 @@ body{text-align:center;}
 			<a href="#" class="find-btn">비밀번호 찾기</a>
 		</div>
 	</div>
+	<div class="footer" style="height:calc(20vh - 75px);">
+    	<span> © Copyright 2019. All rights reserved.</span>
+    </div>
 </body>
 </html>

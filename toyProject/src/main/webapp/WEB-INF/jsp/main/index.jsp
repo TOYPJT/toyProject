@@ -40,7 +40,7 @@
     <div class="header">
         <div class="logo">logo</div>
         <div class="web-btn">
-	        <a class="header_btn" style="background-color:white;color:#008299;margin-right:30px;"><span>회원가입</span></a>
+	        <a class="header_btn" onclick="location.href='/login/register'" style="background-color:white;color:#008299;margin-right:30px;"><span>회원가입</span></a>
 	        <a class="header_btn" onclick="location.href='/login/login'"><span>로그인</span></a>
         </div>
         <div class="mobile-btn">

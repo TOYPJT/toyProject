@@ -17,4 +17,9 @@ public class LoginController {
 		return "login/login";
 	}
 	
+	@RequestMapping("/login/register")
+	public String goRegister(Model model){
+		return "login/register";
+	}
+	
 }
