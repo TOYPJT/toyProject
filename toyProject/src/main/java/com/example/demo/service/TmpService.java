@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.DAO.TmpDao;
+import com.example.demo.DAO.TmpTest;
 import com.example.demo.tmp_entity.TmpEntity;
 
 @Service
@@ -36,7 +37,7 @@ public class TmpService {
 	
 	@Transactional
 	public void delTmpMember(String userId){
-		tmpDao.deleteById(userId);
+		tmpDao.deleteAllByUserId(userId);
 	}
 	
 		
