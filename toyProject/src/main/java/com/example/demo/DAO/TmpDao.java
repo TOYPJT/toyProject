@@ -20,9 +20,7 @@ public interface TmpDao  extends JpaRepository<TmpEntity,String > {
 	 * @return
 	 */
 	List<TmpEntity> findAllByOrderByUserIdDesc();
-	
-	<S extends TmpEntity> S save(S entity) ;
-	
+		
 	void deleteById(String userId) ; //기존 삭제
 
 	@Modifying 
