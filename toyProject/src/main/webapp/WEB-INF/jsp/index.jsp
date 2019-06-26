@@ -4,6 +4,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
+<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 </head>
@@ -22,7 +24,7 @@ ${user.userId } <input type="button" value="삭제" OnClick="window.location='<%
 
 
 </c:forEach>
-<button class="btn_sns_login" id="btn_kakao" onclick="javascript:kakaoLogin();">카카오톡으로 로그인</button>
+<button onclick="javascript:kakaoLogin();">카카오톡으로 로그인</button>
 
 <div id="kakao-profile"></div>
 
@@ -38,12 +40,14 @@ ${user.userId } <input type="button" value="삭제" OnClick="window.location='<%
      url: '/v1/user/me',
      success: function(res) {
      // epassUserCheck(res.kaccount_email, '카카오');
-      //Kakao.Auth.logout();
+      Kakao.Auth.logout();
       //alert(JSON.stringify(res));   
       document.getElementById("kakao-profile").append(res.properties.nickname+"님 ");
       document.getElementById("kakao-profile").append(res.kaccount_email);
       //$("#kakao-profile").append($("<img/>",{"src":res.properties.profile_image,"alt":res.properties.nickname+"님의 프로필 사진"}));
-     },
+  		window.location = <%=request.getContextPath()%>"\save?user_id="+res.kaccount_email+"&user_password=1234";
+      
+      },
      fail: function(error) {
       console.log(error);
      }
