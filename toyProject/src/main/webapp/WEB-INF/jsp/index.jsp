@@ -24,10 +24,12 @@ ${user.userId } <input type="button" value="삭제" OnClick="window.location='<%
 </c:forEach>
 <button class="btn_sns_login" id="btn_kakao" onclick="javascript:kakaoLogin();">카카오톡으로 로그인</button>
 
+<div id="kakao-profile"></div>
+
 <!--카카오-->
 <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
 <script>  
- Kakao.init("");
+ Kakao.init("52df37235bd8b48ebb211bd920161dcd");
  
  function kakaoLogin(){
   Kakao.Auth.login({      
@@ -35,10 +37,11 @@ ${user.userId } <input type="button" value="삭제" OnClick="window.location='<%
     Kakao.API.request({
      url: '/v1/user/me',
      success: function(res) {
-      epassUserCheck(res.kaccount_email, '카카오');
+     // epassUserCheck(res.kaccount_email, '카카오');
       //Kakao.Auth.logout();
-      //alert(JSON.stringify(res));             
-      //$("#kakao-profile").append(res.id+"|"+res.properties.nickname);
+      //alert(JSON.stringify(res));   
+      document.getElementById("kakao-profile").append(res.properties.nickname+"님 ");
+      document.getElementById("kakao-profile").append(res.kaccount_email);
       //$("#kakao-profile").append($("<img/>",{"src":res.properties.profile_image,"alt":res.properties.nickname+"님의 프로필 사진"}));
      },
      fail: function(error) {
