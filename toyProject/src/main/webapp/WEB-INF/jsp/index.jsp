@@ -19,10 +19,39 @@ HelloWorld!!!!
 
 ${user.userId } <input type="button" value="삭제" OnClick="window.location='<%=request.getContextPath()%>/delMember?user_id=${user.userId}'" >
 <br/>
+
+
 </c:forEach>
+<button class="btn_sns_login" id="btn_kakao" onclick="javascript:kakaoLogin();">카카오톡으로 로그인</button>
 
-
-
+<!--카카오-->
+<script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+<script>  
+ Kakao.init("");
+ 
+ function kakaoLogin(){
+  Kakao.Auth.login({      
+   success: function(authObj) {
+    Kakao.API.request({
+     url: '/v1/user/me',
+     success: function(res) {
+      epassUserCheck(res.kaccount_email, '카카오');
+      //Kakao.Auth.logout();
+      //alert(JSON.stringify(res));             
+      //$("#kakao-profile").append(res.id+"|"+res.properties.nickname);
+      //$("#kakao-profile").append($("<img/>",{"src":res.properties.profile_image,"alt":res.properties.nickname+"님의 프로필 사진"}));
+     },
+     fail: function(error) {
+      console.log(error);
+     }
+    });
+   },
+   fail: function(err) {
+    console.log(err);
+   }
+  });      
+ }
+</script>
 
 
 </body>
