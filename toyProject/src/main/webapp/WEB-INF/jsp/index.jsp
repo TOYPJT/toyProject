@@ -24,7 +24,11 @@ ${user.userId } <input type="button" value="삭제" OnClick="window.location='<%
 
 
 </c:forEach>
-<button onclick="javascript:kakaoLogin();">카카오톡으로 로그인</button>
+
+<img  src="/resources/images/ui/Kakao_login.png" 
+onclick="javascript:kakaoLogin();"
+style="width:60px;cursor:pointer;"/>
+
 
 <div id="kakao-profile"></div>
 
