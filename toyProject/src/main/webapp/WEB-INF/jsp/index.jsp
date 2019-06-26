@@ -41,7 +41,8 @@ ${user.userId } <input type="button" value="삭제" OnClick="window.location='<%
      success: function(res) {
      // epassUserCheck(res.kaccount_email, '카카오');
       Kakao.Auth.logout();
-      //alert(JSON.stringify(res));   
+      //alert(JSON.stringify(res)); 
+      alert(res.properties.nickname+"님 ");
       document.getElementById("kakao-profile").append(res.properties.nickname+"님 ");
       document.getElementById("kakao-profile").append(res.kaccount_email);
       //$("#kakao-profile").append($("<img/>",{"src":res.properties.profile_image,"alt":res.properties.nickname+"님의 프로필 사진"}));
