@@ -38,12 +38,14 @@ public class HomeController {
 	@RequestMapping("/save")
 	public String memberSave(@RequestParam(value = "user_id", required = true) String user_id,
 			@RequestParam(value = "user_password", required = true) String user_password,
+			@RequestParam(value = "user_nm", required = true) String userNm,
             HttpSession session, Model model) {
 		
 		TmpEntity tmpEntity = new TmpEntity();
 		
 		tmpEntity.setUserId(user_id);
 		tmpEntity.setUserPassword(user_password);
+		tmpEntity.setUserNm(userNm);
 		
 		tmpService.saveTmpMember(tmpEntity);
 		

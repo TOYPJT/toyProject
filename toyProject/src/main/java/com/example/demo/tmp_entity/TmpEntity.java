@@ -20,6 +20,9 @@ public class TmpEntity {
 	@Column(name="PASSWORD")
 	private String userPassword;
 	
+	@Column(name="USERNM")
+	private String userNm;
+	
 	
 	
 	

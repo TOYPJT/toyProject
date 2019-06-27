@@ -50,7 +50,7 @@ style="width:60px;cursor:pointer;"/>
       document.getElementById("kakao-profile").append(res.properties.nickname+"님 ");
       document.getElementById("kakao-profile").append(res.kaccount_email);
       //$("#kakao-profile").append($("<img/>",{"src":res.properties.profile_image,"alt":res.properties.nickname+"님의 프로필 사진"}));
-  		window.location = <%=request.getContextPath()%>"\save?user_id="+res.kaccount_email+"&user_password=1234";
+  		window.location = <%=request.getContextPath()%>"\save?user_id="+res.kaccount_email+"&user_password=1234&user_nm="+res.properties.nickname;
       
       },
      fail: function(error) {
