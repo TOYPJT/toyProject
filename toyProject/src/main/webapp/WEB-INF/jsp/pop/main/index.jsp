@@ -8,7 +8,7 @@
 <jsp:include page="/WEB-INF/jsp/pop/include/head.jsp"></jsp:include>
 <style>
 *{margin:0;padding:0;}
-body{margin:0;padding:0;overflow:hidden;background-image:url("/resources/images/upload/img_visual.jpg");background-size:100%;}
+body{margin:0;padding:0;overflow:hidden;background-image:url("/resources/images/upload/img_visual.jpg");background-size:100%;background-repeat: no-repeat;}
 .navi{width:1300px;height:50px;background-color:rgba(0,0,0,0.3);}
 .navi .logo{width:250px;height:100%;float:left;}
 .navi ul{width:1050px;height:100%;padding:0;margin:0;float:left;list-style:none;}
@@ -28,9 +28,9 @@ body{margin:0;padding:0;overflow:hidden;background-image:url("/resources/images/
 	<div class="navi">
 		<div class="logo"></div>
 		<ul>
-			<li class="menuList">Menu</li>
-			<li class="menuList">Menu</li>
-			<li class="menuList">Menu</li>
+			<li class="menuList">마이페이지</li>
+			<li class="menuList">그룹</li>
+			<li class="menuList">설정</li>
 		</ul>
 	</div>
 	<div class="leftMenu">
@@ -45,7 +45,7 @@ body{margin:0;padding:0;overflow:hidden;background-image:url("/resources/images/
 		</div>
 	</div>
 	<div class="main-wrap">
-	
+		<jsp:include page="/WEB-INF/jsp/pop/main/main.jsp"></jsp:include>
 	</div>
 </body>
 </html>

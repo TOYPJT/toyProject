@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 
+import java.util.Date;
 import java.util.List;
 
 import javax.servlet.http.HttpSession;
@@ -46,6 +47,7 @@ public class HomeController {
 		tmpEntity.setUserId(user_id);
 		tmpEntity.setUserPassword(user_password);
 		tmpEntity.setUserNm(userNm);
+		tmpEntity.setUpdateDt(new Date());
 		
 		tmpService.saveTmpMember(tmpEntity);
 		
