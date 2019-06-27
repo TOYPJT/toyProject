@@ -25,7 +25,7 @@ ${user.userId } <input type="button" value="삭제" OnClick="window.location='<%
 
 </c:forEach>
 
-<img  src="/resources/images/ui/Kakao_login.png" 
+<img  src="/resources/images/ui/kakao_loginBtn.png" 
 onclick="javascript:kakaoLogin();"
 style="width:60px;cursor:pointer;"/>
 
