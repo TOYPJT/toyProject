@@ -30,6 +30,35 @@ onclick="javascript:kakaoLogin();"
 style="cursor:pointer;"/>
 
 
+		<!-- //login_type e -->
+			<div id="naver_id_login" style="width: 0px;height: 0px"></div>
+			
+			<script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
+						
+			  <script type="text/javascript">
+			  var naver_id_login = new naver_id_login("cwuVTNBPw_SL0YSCV31P", "http://localhost:8099/");
+				var state = naver_id_login.getUniqState();
+				naver_id_login.setButton("white", 2,40);
+				naver_id_login.setDomain(".sevice.com");
+				naver_id_login.setState(state);
+				naver_id_login.setPopup();
+				naver_id_login.init_naver_id_login();
+				
+				  function fnLoginNaver() {
+					  $("#naver_id_login_anchor").click();
+				  }
+		
+		
+		// 네이버 사용자 프로필 조회
+		naver_id_login.get_naver_userprofile("naverSignInCallback()");
+		
+		// 네이버 사용자 프로필 조회 이후 프로필 정보를 처리할 callback function
+		function naverSignInCallback() {
+			alert(naver_id_login.getProfileData('email'));
+			alert(naver_id_login.getProfileData('nickname'));
+		}
+	</script>
+
 <div id="kakao-profile"></div>
 
 <!--카카오-->
