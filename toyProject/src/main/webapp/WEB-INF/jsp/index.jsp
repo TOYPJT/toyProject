@@ -10,7 +10,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-HelloWorld!!!! 
+테스트페이지 
 <br/>
 
 유저 목록 : ${list }
