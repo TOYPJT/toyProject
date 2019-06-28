@@ -8,7 +8,7 @@
 <jsp:include page="/WEB-INF/jsp/pop/include/head.jsp"></jsp:include>
 <style>
 *{margin:0;padding:0;}
-body{margin:0;padding:0;overflow:hidden;background-image:url("/resources/images/upload/img_visual.jpg");background-size:100%;background-repeat: no-repeat;}
+body{margin:0;padding:0;width:1300px;height:750px;overflow:hidden; background-image:url("/resources/images/upload/img_visual.jpg"); background-size:1300px 705px;background-repeat: no-repeat;}
 .navi{width:1300px;height:50px;background-color:rgba(0,0,0,0.3);}
 .navi .logo{width:250px;height:100%;float:left;}
 .navi ul{width:1050px;height:100%;padding:0;margin:0;float:left;list-style:none;}
@@ -16,6 +16,7 @@ body{margin:0;padding:0;overflow:hidden;background-image:url("/resources/images/
 .navi ul li:hover{background-color:rgba(0,0,0,0.8);cursor:pointer;}
 .leftMenu{width:250px;height:654px;float:left;background-color:rgba(0,0,0,0.5);}
 .main-wrap{width:1050px;height:654px;float:left;}
+.main-wrap .include-wrap{width:1000px;height:600px;background-color:rgba(0,0,0,0.3);margin-left:25px;margin-top:25px;}
 .leftMenu .profile-wrap{width:100%;height:40%;}
 .leftMenu .group{width:100%;height:60%;}
 .leftMenu .profile-wrap .profile{width:100%;height:100%;display:flex;justify-content:center;align-items: center;flex-direction: column;color:white;font-size:15px;}
@@ -33,19 +34,23 @@ body{margin:0;padding:0;overflow:hidden;background-image:url("/resources/images/
 			<li class="menuList">설정</li>
 		</ul>
 	</div>
-	<div class="leftMenu">
-		<div class="profile-wrap">
-			<div class="profile">
-				<div class="profile-img" style="background-image:url('/resources/images/upload/홍길동.png')"></div>
-				<div class="profile-desc">홍길동</div>
+	<div style="overflow:hidden;width:1300px;">
+		<div class="leftMenu">
+			<div class="profile-wrap">
+				<div class="profile">
+					<div class="profile-img" style="background-image:url('/resources/images/upload/홍길동.png')"></div>
+					<div class="profile-desc">홍길동</div>
+				</div>
+			</div>
+			<div class="group">
+			
 			</div>
 		</div>
-		<div class="group">
-		
+		<div class="main-wrap">
+			<div class="include-wrap">
+				<jsp:include page="/WEB-INF/jsp/pop/main/main.jsp"></jsp:include>
+			</div>
 		</div>
-	</div>
-	<div class="main-wrap">
-		<jsp:include page="/WEB-INF/jsp/pop/main/main.jsp"></jsp:include>
 	</div>
 </body>
 </html>
