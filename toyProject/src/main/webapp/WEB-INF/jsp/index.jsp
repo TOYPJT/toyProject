@@ -36,7 +36,7 @@ style="cursor:pointer;"/>
 			<script type="text/javascript" src="https://static.nid.naver.com/js/naverLogin_implicit-1.0.3.js" charset="utf-8"></script>
 						
 			  <script type="text/javascript">
-			  var naver_id_login = new naver_id_login("cwuVTNBPw_SL0YSCV31P", "http://localhost:8099/");
+			  var naver_id_login = new naver_id_login("cwuVTNBPw_SL0YSCV31P", "http://13.124.222.219:8080/");
 				var state = naver_id_login.getUniqState();
 				naver_id_login.setButton("white", 2,40);
 				naver_id_login.setDomain(".sevice.com");
